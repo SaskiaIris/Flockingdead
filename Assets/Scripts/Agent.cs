@@ -74,21 +74,21 @@ public class Agent : MonoBehaviour {
                 else if (distance < sight)
                 {
                     // Cohesion
-                    //dX += TODO
-                    //dY += TODO
+                   dX += (position.x * a.position.x);
+                   dY += (position.y * a.position.y);
                 }
                 if (distance < sight)
                 {
                     // Alignment
-                    //dX += TODO
-                    //dY += TODO
+                   dX += (position.x / a.position.x);
+                   dY += (position.y / a.position.y);
                 }
             }
             if (a.isZombie && distance < sight)
             {
                 // Evade
-                //dX += TODO
-                //dY += TODO
+                dX += (position.x + a.position.x);
+                dY += (position.y + a.position.y);
             }
         }
     }
